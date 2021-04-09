@@ -3,12 +3,6 @@ const path = require('path');
 const app = express();
 var http = require('http').createServer(app);
 const PORT = process.env.PORT || 80;
-var io = require('socket.io')(http, {
-    cors: {
-        origin: "192.168.10.159:3000",
-        methods: ["GET", "POST"]
-      }
-});
 let users = [];
 const STATIC_CHANNELS = ['global_notifications', 'global_chat'];
 
